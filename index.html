@@ -86,7 +86,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23274ead'/></svg>">
 </head>
 <body>
-    <video id="background-video" autoplay muted loop playsinline preload="auto" class="video-background">
+    <video autoplay muted loop class="video-background">
         <source src="https://github.com/loliloli-alarm/loli-website/blob/e6dd2f0af040f07bb318d3378a84255db41022d0/2407_LOLIREEL.mp4?raw=true" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -96,28 +96,5 @@
     <div class="title">Website Under Construction</div>
 
     <div class="email">julia@loliberlin.de</div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var video = document.getElementById('background-video');
-            if (video) {
-                var promise = video.play();
-                if (promise !== undefined) {
-                    promise.then(function() {
-                        // Autoplay started
-                    }).catch(function(error) {
-                        // Autoplay was prevented. Muting and trying to play again.
-                        video.muted = true;
-                        video.play();
-                    });
-                }
-
-                video.addEventListener('ended', function() {
-                    video.currentTime = 0;
-                    video.play();
-                });
-            }
-        });
-    </script>
 </body>
 </html>
