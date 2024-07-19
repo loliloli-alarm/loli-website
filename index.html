@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Video with Logo and Typewriter Effect</title>
+    <title>LOLI:BERLIN</title>
     <style>
         body, html {
             height: 100%;
@@ -28,14 +28,14 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            filter: brightness(30%); /* Makes the video 70% darker */
+            filter: brightness(30%);
         }
 
         .logo {
             position: absolute;
             top: 20px;
             left: 20px;
-            width: 165px; /* Increased the width by 10% from 150px */
+            width: 165px;
         }
 
         .title {
@@ -63,6 +63,24 @@
         @keyframes blink-caret {
             from, to { border-color: transparent }
             50% { border-color: white }
+        }
+
+        /* Media queries for mobile responsiveness */
+        @media (max-width: 768px) {
+            .logo {
+                width: 100px; /* Adjust logo size for mobile */
+                top: 10px;
+                left: 10px;
+            }
+
+            .title {
+                font-size: 18px; /* Adjust title size for mobile */
+            }
+
+            .email {
+                font-size: 14px; /* Adjust email size for mobile */
+                bottom: 10px;
+            }
         }
     </style>
 </head>
